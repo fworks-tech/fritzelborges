@@ -1,4 +1,10 @@
-export function AboutSection() {
+import type { Dictionary } from "@/i18n/types";
+
+type AboutSectionProps = {
+  about: Dictionary["about"];
+};
+
+export function AboutSection({ about }: AboutSectionProps) {
   return (
     <section
       id="sobre"
@@ -10,23 +16,20 @@ export function AboutSection() {
           id="about-heading"
           className="text-sm font-semibold uppercase tracking-wider text-cyan-400"
         >
-          Sobre
+          {about.title}
         </h2>
         <p className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Engenharia de software com visão de produto
+          {about.heading}
         </p>
         <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
-          <p className="text-base leading-relaxed text-zinc-400">
-            Atuo no ciclo completo de desenvolvimento: arquitetura, implementação,
-            testes e operação. Gosto de equilibrar pragmatismo técnico com clareza
-            para o time e para o negócio — do desenho de APIs ao refinamento de
-            interfaces em React.
-          </p>
-          <p className="text-base leading-relaxed text-zinc-400">
-            Valorizo código legível, contratos de API bem definidos e bases que
-            facilitam evolução. Quando faz sentido, uso TypeScript ponta a ponta
-            para reduzir regressões e melhorar a experiência de desenvolvimento.
-          </p>
+          {about.paragraphs.map((paragraph) => (
+            <p
+              key={paragraph.slice(0, 32)}
+              className="text-base leading-relaxed text-zinc-400"
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </section>

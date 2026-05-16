@@ -1,28 +1,10 @@
-const EXPERIENCE = [
-  {
-    title: "Engenheiro de software sênior",
-    org: "Empresa / consultoria — exemplo",
-    period: "20XX — presente",
-    summary:
-      "Liderança técnica em squads ágeis, definição de padrões de API e revisão de arquitetura. Entrega de features críticas com Laravel e front-end em React.",
-  },
-  {
-    title: "Engenheiro de software",
-    org: "Produto digital — exemplo",
-    period: "20XX — 20XX",
-    summary:
-      "Desenvolvimento full stack, integrações com terceiros, melhoria de performance e redução de débito técnico em bases legadas.",
-  },
-  {
-    title: "Desenvolvedor",
-    org: "Agência / startup — exemplo",
-    period: "20XX — 20XX",
-    summary:
-      "Construção de MVPs, landing pages e painéis administrativos; foco em time-to-market e qualidade perceptível pelo usuário.",
-  },
-];
+import type { Dictionary } from "@/i18n/types";
 
-export function ExperienceSection() {
+type ExperienceSectionProps = {
+  experience: Dictionary["experience"];
+};
+
+export function ExperienceSection({ experience }: ExperienceSectionProps) {
   return (
     <section
       id="experiencia"
@@ -34,17 +16,14 @@ export function ExperienceSection() {
           id="experience-heading"
           className="text-sm font-semibold uppercase tracking-wider text-cyan-400"
         >
-          Experiência
+          {experience.title}
         </h2>
         <p className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Trajetória resumida
+          {experience.heading}
         </p>
-        <p className="mt-4 max-w-2xl text-sm text-zinc-500">
-          Substitua pelos cargos reais — estes blocos são placeholders para estrutura
-          e tom (issue #12).
-        </p>
+        <p className="mt-4 max-w-2xl text-sm text-zinc-500">{experience.note}</p>
         <ol className="mt-12 space-y-8 border-l border-white/10 pl-6 sm:pl-8">
-          {EXPERIENCE.map((job) => (
+          {experience.items.map((job) => (
             <li key={job.title + job.period} className="relative">
               <span
                 className="absolute -left-[29px] top-2 size-3 rounded-full border-2 border-cyan-400 bg-[#070a12] sm:-left-[33px]"

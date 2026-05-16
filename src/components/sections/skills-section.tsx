@@ -1,15 +1,10 @@
-const SKILLS = [
-  "Laravel & PHP",
-  "React & Next.js",
-  "TypeScript & JavaScript",
-  "REST & integrações",
-  "PostgreSQL / MySQL",
-  "Git, CI/CD",
-  "UI responsiva & acessibilidade",
-  "Observabilidade básica",
-];
+import type { Dictionary } from "@/i18n/types";
 
-export function SkillsSection() {
+type SkillsSectionProps = {
+  skills: Dictionary["skills"];
+};
+
+export function SkillsSection({ skills }: SkillsSectionProps) {
   return (
     <section
       id="habilidades"
@@ -21,13 +16,13 @@ export function SkillsSection() {
           id="skills-heading"
           className="text-sm font-semibold uppercase tracking-wider text-cyan-400"
         >
-          Habilidades
+          {skills.title}
         </h2>
         <p className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          O que costumo levar para o time
+          {skills.heading}
         </p>
         <ul className="mt-10 flex flex-wrap gap-2 sm:gap-3">
-          {SKILLS.map((skill) => (
+          {skills.items.map((skill) => (
             <li key={skill}>
               <span className="inline-flex rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm text-zinc-200">
                 {skill}

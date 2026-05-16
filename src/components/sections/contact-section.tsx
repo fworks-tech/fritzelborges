@@ -1,7 +1,12 @@
 import Link from "next/link";
+import type { Dictionary } from "@/i18n/types";
 import { siteConfig } from "@/lib/site";
 
-export function ContactSection() {
+type ContactSectionProps = {
+  contact: Dictionary["contact"];
+};
+
+export function ContactSection({ contact }: ContactSectionProps) {
   return (
     <section
       id="contato"
@@ -13,21 +18,18 @@ export function ContactSection() {
           id="contact-heading"
           className="text-sm font-semibold uppercase tracking-wider text-cyan-400"
         >
-          Contato
+          {contact.title}
         </h2>
         <p className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Vamos conversar
+          {contact.heading}
         </p>
-        <p className="mt-4 max-w-2xl text-base text-zinc-400">
-          Aberto a oportunidades, consultorias pontuais e projetos com time
-          alinhado a boas práticas. Envie uma mensagem com contexto e prazos.
-        </p>
+        <p className="mt-4 max-w-2xl text-base text-zinc-400">{contact.body}</p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
           <Link
             href={siteConfig.social.email}
             className="inline-flex items-center justify-center rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-[#05070d] shadow-lg shadow-cyan-500/15 transition hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
           >
-            Enviar e-mail
+            {contact.emailCta}
           </Link>
           <Link
             href={siteConfig.social.linkedin}
@@ -35,7 +37,7 @@ export function ContactSection() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            LinkedIn
+            {contact.linkedinCta}
           </Link>
         </div>
       </div>

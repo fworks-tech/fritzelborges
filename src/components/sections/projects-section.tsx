@@ -1,38 +1,11 @@
 import Link from "next/link";
+import type { Dictionary } from "@/i18n/types";
 
-type ProjectCard = {
-  name: string;
-  description: string;
-  stack: string;
-  cta: string;
-  href?: string;
+type ProjectsSectionProps = {
+  projects: Dictionary["projects"];
 };
 
-const PROJECTS: ProjectCard[] = [
-  {
-    name: "Plataforma interna de operações",
-    description:
-      "Painel administrativo com permissões granulares, filas e relatórios. API Laravel + SPA React.",
-    stack: "Laravel · React · TS · PostgreSQL",
-    cta: "Detalhes em breve",
-  },
-  {
-    name: "API pública com documentação viva",
-    description:
-      "Contratos versionados, validação estrita e observabilidade para integradores.",
-    stack: "Laravel · OpenAPI · Redis",
-    cta: "Detalhes em breve",
-  },
-  {
-    name: "Site institucional performático",
-    description:
-      "Conteúdo estático com ótimo Lighthouse; formulários com proteção anti-spam.",
-    stack: "Next.js · Vercel",
-    cta: "Detalhes em breve",
-  },
-];
-
-export function ProjectsSection() {
+export function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
     <section
       id="projetos"
@@ -44,13 +17,13 @@ export function ProjectsSection() {
           id="projects-heading"
           className="text-sm font-semibold uppercase tracking-wider text-cyan-400"
         >
-          Projetos
+          {projects.title}
         </h2>
         <p className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Seleção de trabalhos
+          {projects.heading}
         </p>
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PROJECTS.map((project) => (
+          {projects.items.map((project) => (
             <li key={project.name}>
               <article className="flex h-full flex-col rounded-xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-cyan-400/35 hover:bg-white/[0.05]">
                 <h3 className="text-lg font-semibold text-white">{project.name}</h3>
