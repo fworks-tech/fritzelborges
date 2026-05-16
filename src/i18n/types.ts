@@ -15,6 +15,13 @@ export type ExperienceItem = {
   summary: string;
 };
 
+export type EducationItem = {
+  degree: string;
+  institution: string;
+  period: string;
+  href?: string;
+};
+
 export type ProjectItem = {
   name: string;
   description: string;
@@ -63,6 +70,11 @@ export type Dictionary = {
     heading: string;
     note: string;
     items: ExperienceItem[];
+  };
+  education: {
+    title: string;
+    heading: string;
+    items: EducationItem[];
   };
   projects: {
     title: string;

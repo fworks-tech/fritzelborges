@@ -21,6 +21,7 @@ export const dictionary: Dictionary = {
     { href: "#sobre", label: "About" },
     { href: "#habilidades", label: "Skills" },
     { href: "#experiencia", label: "Experience" },
+    { href: "#formacao", label: "Education" },
     { href: "#projetos", label: "Projects" },
     { href: "#contato", label: "Contact" },
   ],
@@ -74,7 +75,7 @@ export const dictionary: Dictionary = {
   experience: {
     title: "Experience",
     heading: "Professional journey",
-    note: "Selected recent roles; full history on LinkedIn and résumé.",
+    note: "Recent roles below; earlier positions (SoftExpert, TOTVS) at the end. Full history on LinkedIn and résumé.",
     items: [
       {
         title: "Full-Stack TypeScript & Node Engineer",
@@ -111,6 +112,38 @@ export const dictionary: Dictionary = {
         summary:
           "Store management platform and geolocation app; GitLab pipelines, code splitting, Context API, Zod validation, and i18n.",
       },
+      {
+        title: "Senior Frontend Developer",
+        org: "SoftExpert · Brazil",
+        period: "Jun 2019 — Jul 2020",
+        summary:
+          "Enterprise web UIs with React and legacy stacks; component libraries, performance tuning, and cross-team delivery in a regulated software context.",
+      },
+      {
+        title: "R&D Engineer I · QA Technician · Intern",
+        org: "TOTVS · Brazil",
+        period: "2016 — 2019",
+        summary:
+          "Progression from intern to R&D: automated tests, API and product quality, and front-end prototypes for internal platforms.",
+      },
+    ],
+  },
+  education: {
+    title: "Education",
+    heading: "Academic background",
+    items: [
+      {
+        degree: "Postgraduate, Software Architecture, Data Science & Cybersecurity",
+        institution: "PUCPR — Pontifícia Universidade Católica do Paraná",
+        period: "Apr 2025 — Apr 2027",
+        href: "https://www.pucpr.br/",
+      },
+      {
+        degree: "Associate, Systems Analysis and Development",
+        institution: "UNINTER",
+        period: "Jan 2018 — Dec 2021",
+        href: "https://www.uninter.com/",
+      },
     ],
   },
   projects: {
@@ -132,6 +165,14 @@ export const dictionary: Dictionary = {
         stack: "Python · Streamlit · RAG",
         cta: "Open demo",
         href: "https://verihire.streamlit.app/",
+      },
+      {
+        name: "Jupyter-Crypto-Wizard",
+        description:
+          "Interactive Streamlit notebook for exploring crypto market data and lightweight analysis workflows.",
+        stack: "Python · Streamlit · Jupyter",
+        cta: "Open demo",
+        href: "https://jupyter-crypto-wizard.streamlit.app/",
       },
       {
         name: "fritzelborges.com.br",

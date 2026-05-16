@@ -18,6 +18,10 @@ test.describe("Home page", () => {
       "href",
       "#sobre",
     );
+    await expect(nav.getByRole("link", { name: "Formação" })).toHaveAttribute(
+      "href",
+      "#formacao",
+    );
     await expect(nav.getByRole("link", { name: "Contato" })).toHaveAttribute(
       "href",
       "#contato",
@@ -57,8 +61,8 @@ test.describe("Home page", () => {
     await toggle.click();
     await expect(mobileMenu).toBeVisible();
 
-    await mobileMenu.getByRole("link", { name: "Projetos" }).click();
-    await expect(page.locator("#projetos")).toBeInViewport();
+    await mobileMenu.getByRole("link", { name: "Formação" }).click();
+    await expect(page.locator("#formacao")).toBeInViewport();
   });
 
   test("redirects / to a locale prefix", async ({ page }) => {
