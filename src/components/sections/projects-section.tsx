@@ -35,6 +35,8 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                   <Link
                     href={project.href}
                     className="mt-6 inline-flex text-sm font-semibold text-cyan-400 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     {project.cta} →
                   </Link>
