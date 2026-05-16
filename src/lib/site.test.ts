@@ -7,7 +7,7 @@ describe("siteConfig", () => {
   });
 
   it("includes contact and social links", () => {
-    expect(siteConfig.social.email).toMatch(/^mailto:/);
+    expect(siteConfig.social.linkedin).toMatch(/^https:\/\//);
     expect(siteConfig.social.github).toMatch(/^https:\/\//);
     expect(siteConfig.repoUrl).toMatch(/^https:\/\/github\.com\//);
   });
