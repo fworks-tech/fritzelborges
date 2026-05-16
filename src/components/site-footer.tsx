@@ -33,6 +33,14 @@ export function SiteFooter({ footer }: SiteFooterProps) {
             LinkedIn
           </Link>
           <Link
+            href={siteConfig.social.portfolio}
+            className="text-zinc-400 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            fworks.tech
+          </Link>
+          <Link
             href={siteConfig.repoUrl}
             className="text-zinc-400 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
             rel="noopener noreferrer"
