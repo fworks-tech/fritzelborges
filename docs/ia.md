@@ -6,12 +6,12 @@ This document describes public routes, locale prefixes, and home-page anchors.
 
 | Prefix | Language | HTML `lang` |
 |--------|----------|-------------|
-| `/pt` | Portuguese (default) | `pt-BR` |
-| `/en` | English | `en` |
+| `/en` | English (default) | `en` |
+| `/pt` | Portuguese | `pt-BR` |
 
 | URL | Behavior |
 |-----|----------|
-| `/` | Redirects via `src/proxy.ts`: `Accept-Language`, then `NEXT_LOCALE` cookie, else `pt` |
+| `/` | Redirects via `src/proxy.ts`: `Accept-Language`, then `NEXT_LOCALE` cookie, else `en` |
 | `/pt`, `/en` | Localized landing pages |
 | `/pt/...`, `/en/...` | Same locale segment; unknown paths show the localized 404 |
 

@@ -8,9 +8,9 @@ import {
 } from "@/i18n/settings";
 
 describe("i18n settings", () => {
-  it("supports en and pt with pt as default", () => {
+  it("supports en and pt with en as default", () => {
     expect(locales).toEqual(["en", "pt"]);
-    expect(defaultLocale).toBe("pt");
+    expect(defaultLocale).toBe("en");
   });
 
   it("validates locale strings", () => {
