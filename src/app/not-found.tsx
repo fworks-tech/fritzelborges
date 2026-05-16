@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { defaultLocale } from "@/i18n/settings";
+import { defaultLocale, localeToHtmlLang } from "@/i18n/settings";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default async function NotFound() {
   const { notFound: copy } = dict;
 
   return (
-    <html lang="pt-BR">
+    <html lang={localeToHtmlLang(defaultLocale)}>
       <body
         data-testid="not-found-page"
         className="flex min-h-screen flex-col items-center justify-center bg-[#070a12] px-4 py-24 text-center font-sans text-zinc-200"
