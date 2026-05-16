@@ -49,4 +49,4 @@ Anchor IDs are shared across locales (Portuguese slugs for stable deep links).
 
 ## Environment variables
 
-- `NEXT_PUBLIC_SITE_URL` — Canonical site URL (e.g. `https://fritzelborges.com.br`). Used in metadata, sitemap, and `robots`. May be omitted in development; the fallback is the production domain in `src/lib/site.ts`.
+- `NEXT_PUBLIC_SITE_URL` — Canonical site URL (e.g. `https://fritzelborges.vercel.app`). Used in metadata, sitemap, and `robots`. May be omitted in development; the fallback is the production URL in `src/lib/site.ts`.

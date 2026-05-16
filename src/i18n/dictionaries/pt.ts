@@ -175,12 +175,12 @@ export const dictionary: Dictionary = {
         href: "https://jupyter-crypto-wizard.streamlit.app/",
       },
       {
-        name: "fritzelborges.com.br",
+        name: "fritzelborges.vercel.app",
         description:
-          "Este site — portfolio pessoal bilíngue (PT/EN) com App Router, i18n e testes E2E.",
+          "Este site — portfolio pessoal bilíngue (PT/EN) com App Router, i18n e testes E2E. Código no GitHub.",
         stack: "Next.js 16 · Vitest · Playwright",
-        cta: "Ver repositório",
-        href: "https://github.com/fworks-tech/fritzelborges",
+        cta: "Visitar site",
+        href: "https://fritzelborges.vercel.app/",
       },
     ],
   },

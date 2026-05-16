@@ -1,6 +1,6 @@
 # fritzelborges
 
-Personal site — [fritzelborges.com.br](https://fritzelborges.com.br)
+Personal site — [fritzelborges.vercel.app](https://fritzelborges.vercel.app)
 
 ## Stack
 
@@ -75,7 +75,7 @@ Locales are **`/pt`** (default) and **`/en`**, with the App Router proxy redirec
 
 | Variable | Required | Notes |
 |----------|----------|--------|
-| `NEXT_PUBLIC_SITE_URL` | Production | Canonical URL without trailing slash (e.g. `https://fritzelborges.com.br`) |
+| `NEXT_PUBLIC_SITE_URL` | Production | Canonical URL without trailing slash (e.g. `https://fritzelborges.vercel.app`) |
 
 ```bash
 npm run build && npm run start   # self-hosted smoke test
