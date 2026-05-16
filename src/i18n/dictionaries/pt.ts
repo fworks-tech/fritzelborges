@@ -21,6 +21,7 @@ export const dictionary: Dictionary = {
     { href: "#sobre", label: "Sobre" },
     { href: "#habilidades", label: "Habilidades" },
     { href: "#experiencia", label: "Experiência" },
+    { href: "#formacao", label: "Formação" },
     { href: "#projetos", label: "Projetos" },
     { href: "#contato", label: "Contato" },
   ],
@@ -74,7 +75,7 @@ export const dictionary: Dictionary = {
   experience: {
     title: "Experiência",
     heading: "Trajetória profissional",
-    note: "Seleção de cargos recentes; histórico completo no LinkedIn e currículo.",
+    note: "Cargos recentes abaixo; posições anteriores (SoftExpert, TOTVS) ao final. Histórico completo no LinkedIn e currículo.",
     items: [
       {
         title: "Full-Stack TypeScript & Node Engineer",
@@ -111,6 +112,38 @@ export const dictionary: Dictionary = {
         summary:
           "Plataforma de gestão de lojas e app de geolocalização; pipelines GitLab, code splitting, Context API, validação com Zod e i18n.",
       },
+      {
+        title: "Senior Frontend Developer",
+        org: "SoftExpert · Brasil",
+        period: "jun/2019 — jul/2020",
+        summary:
+          "Interfaces web corporativas com React e legado; bibliotecas de componentes, performance e entrega com times multidisciplinares.",
+      },
+      {
+        title: "Engenheiro de P&D I · Técnico de QA · Estagiário",
+        org: "TOTVS · Brasil",
+        period: "2016 — 2019",
+        summary:
+          "Trajetória de estágio a P&D: testes automatizados, qualidade de APIs e produtos, protótipos de front-end para plataformas internas.",
+      },
+    ],
+  },
+  education: {
+    title: "Formação",
+    heading: "Trajetória acadêmica",
+    items: [
+      {
+        degree: "Pós-graduação em Arquitetura de Software, Ciência de Dados e Cibersegurança",
+        institution: "PUCPR — Pontifícia Universidade Católica do Paraná",
+        period: "abr/2025 — abr/2027",
+        href: "https://www.pucpr.br/",
+      },
+      {
+        degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+        institution: "UNINTER",
+        period: "jan/2018 — dez/2021",
+        href: "https://www.uninter.com/",
+      },
     ],
   },
   projects: {
@@ -132,6 +165,14 @@ export const dictionary: Dictionary = {
         stack: "Python · Streamlit · RAG",
         cta: "Abrir demo",
         href: "https://verihire.streamlit.app/",
+      },
+      {
+        name: "Jupyter-Crypto-Wizard",
+        description:
+          "Notebook Streamlit interativo para explorar dados de mercado cripto e fluxos leves de análise.",
+        stack: "Python · Streamlit · Jupyter",
+        cta: "Abrir demo",
+        href: "https://jupyter-crypto-wizard.streamlit.app/",
       },
       {
         name: "fritzelborges.com.br",
