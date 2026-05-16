@@ -32,6 +32,7 @@ Anchor IDs are shared across locales (Portuguese slugs for stable deep links).
 | `#sobre` | About / bio |
 | `#habilidades` | Skills |
 | `#experiencia` | Experience |
+| `#formacao` | Education |
 | `#projetos` | Projects |
 | `#contato` | Contact / CTAs |
 

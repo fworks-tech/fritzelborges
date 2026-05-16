@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { AboutSection } from "@/components/sections/about-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { EducationSection } from "@/components/sections/education-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
@@ -25,6 +26,7 @@ export default async function Home({ params }: PageProps) {
       <AboutSection about={dict.about} />
       <SkillsSection skills={dict.skills} />
       <ExperienceSection experience={dict.experience} />
+      <EducationSection education={dict.education} />
       <ProjectsSection projects={dict.projects} />
       <ContactSection contact={dict.contact} />
     </main>
