@@ -65,8 +65,13 @@ test.describe("Home page", () => {
     await expect(page.locator("#formacao")).toBeInViewport();
   });
 
-  test("redirects / to a locale prefix", async ({ page }) => {
-    await page.goto("/");
-    await expect(page).toHaveURL(/\/(pt|en)(\/)?$/);
+  test("redirects / to default locale when Accept-Language has no match", async ({
+    page,
+  }) => {
+    await page.goto("/", {
+      waitUntil: "commit",
+      headers: { "Accept-Language": "fr" },
+    });
+    await expect(page).toHaveURL(/\/en(\/)?$/);
   });
 });

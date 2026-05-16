@@ -29,7 +29,7 @@ The site supports **English** (`en`) and **Portuguese** (`pt`).
 
 | URL | Locale |
 |-----|--------|
-| `/` | Redirects using `Accept-Language`, then `NEXT_LOCALE` cookie, else `pt` |
+| `/` | Redirects using `Accept-Language`, then `NEXT_LOCALE` cookie, else `en` |
 | `/en` | English |
 | `/pt` | Portuguese |
 
@@ -67,7 +67,7 @@ npm run test               # both suites
 npx playwright install     # first-time browser download (Chromium is enough for CI)
 ```
 
-Locales are **`/pt`** (default) and **`/en`**, with the App Router proxy redirecting `/` to a locale. E2E covers home load, anchor navigation, the language switcher, mobile menu, 404, and locale-specific `lang` on `<html>`.
+Locales are **`/en`** (default) and **`/pt`**, with the App Router proxy redirecting `/` to a locale. E2E covers home load, anchor navigation, the language switcher, mobile menu, 404, and locale-specific `lang` on `<html>`.
 
 ## Deployment
 
