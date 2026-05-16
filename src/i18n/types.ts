@@ -73,7 +73,6 @@ export type Dictionary = {
     title: string;
     heading: string;
     body: string;
-    emailCta: string;
     linkedinCta: string;
   };
   notFound: {
